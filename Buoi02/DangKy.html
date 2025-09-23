@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký nhập học</title>
+</head>
+<body>
+    <h1>ĐĂNG KÝ NHẬP HỌC</h1>
+    <form name="DangKy" action="XuLyNhapHoc.php" method="get">
+        <div>
+            Họ tên: <input placeholder="Nhập họ tên" name="hoten" />
+        </div>
+        <div>
+            Mật khẩu: <input placeholder="Nhập mật khẩu" name="matkhau" type="password" />
+        </div>
+        <div>
+            Giới tính:
+            <input type="radio" value="0" name="gt" checked>Nam
+            <input type="radio" value="1" name="gt">Nữ
+            <input type="radio" value="-1" name="gt">Khác
+        </div>
+        <div>
+            Nơi sinh:
+            <select name="noisinh">
+                <option value="HN">Hà Nội</option>
+                <option value="TN">Tây Ninh</option>
+                <option value="LD">Lâm Đồng</option>
+            </select>
+        </div>
+        <button>Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</body>
+</html>
