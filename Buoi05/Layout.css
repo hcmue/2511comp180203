@@ -1,0 +1,11 @@
+.hh-header {
+  height: 130px;
+  background-color: azure;
+  position: relative;
+}
+.hh-logo {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
