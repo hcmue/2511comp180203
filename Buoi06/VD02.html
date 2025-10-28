@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghi danh</title>
+</head>
+
+<body>
+    <form>
+        <h2>GHI DANH</h2>
+        <div>Họ tên: <input id="hoTen" name="hoTen"></div>
+        <div>Môn học:
+            <select name="monHoc" id="monHoc">
+                <option value="OOP">Lập trình Hướng đối tượng</option>
+                <option value="LTNC">Lập trình nâng cao</option>
+                <option value="XSTK">Xác suất thống kê</option>
+            </select>
+        </div>
+        <button type="button" onclick="xuLyDangKy()">Đăng ký</button>
+        <div id="ketQua"></div>
+    </form>
+    <script>
+        function xuLyDangKy() {
+            let hoTenObj = document.getElementById("hoTen");
+            if (hoTenObj.value.trim().length == 0) {
+                alert("Họ tên không hợp lệ");
+                hoTenObj.focus();
+                return;
+            }
+            let monHoc = document.getElementById("monHoc").value;
+            let chuoi = `Bạn ${hoTenObj.value} đăng ký môn: ${monHoc}`;
+            alert(chuoi);
+            document.getElementById("ketQua").innerHTML = chuoi;
+        }
+
+    </script>
+</body>
+
+</html>
