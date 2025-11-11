@@ -17,22 +17,44 @@
     </div>
     <button id="btnLogin" type="button">LOGIN</button>
     <div id="message"></div>
+    <style>
+        .loi {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
     <script src="jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#btnLogin").click(function () {
                 let user = $("#username");
                 let pass = $("#password");
+                //kiểm tra đang LOGIN/LOGOUT
+                if ($(this).html() === "LOGOUT") {
+                    $(this).html('LOGIN');
+                    user.val(''); pass.val('');
+                    user.focus();
+                    $("#message").html('');
+                    return true;
+                }
+
                 if (user.val().trim().length == 0 || pass.val().trim().length == 0) {
                     $("#message").html('Chưa nhập username/password');
+                    user.addClass("loi");
+                    pass.addClass("loi");
                     return false;
                 }
                 $("#message").html('');
                 if (user.val().trim().length < 5 || pass.val().trim().length < 5) {
                     $("#message").html('Sai thông tin đăng nhập');
+                    user.addClass("loi");
+                    pass.addClass("loi");
                     return false;
                 }
+                user.removeClass("loi");
+                pass.removeClass("loi");
                 $("#message").html('Đăng nhập thành công');
+                $(this).html('LOGOUT');
             });
         });
     </script>
