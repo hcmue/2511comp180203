@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>LOGIN</h2>
+    <div>
+        Username: <input id="username" placeholder="Nhập username" />
+    </div>
+    <div>
+        Password: <input id="password" type="password" placeholder="Nhập password" />
+    </div>
+    <button id="btnLogin" type="button">LOGIN</button>
+    <div id="message"></div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnLogin").click(function () {
+                let user = $("#username");
+                let pass = $("#password");
+                if (user.val().trim().length == 0 || pass.val().trim().length == 0) {
+                    $("#message").html('Chưa nhập username/password');
+                    return false;
+                }
+                $("#message").html('');
+                if (user.val().trim().length < 5 || pass.val().trim().length < 5) {
+                    $("#message").html('Sai thông tin đăng nhập');
+                    return false;
+                }
+                $("#message").html('Đăng nhập thành công');
+            });
+        });
+    </script>
+</body>
+
+</html>
