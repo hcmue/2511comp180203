@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--jQuery UI (css + js)-->
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="mytabs">
+        <ul>
+            <li><a href="#tskt">Thông số kỹ thuật</a></li>
+            <li><a href="#video">Video đập hợp</a></li>
+            <li><a href="#binhluan">Bình luận</a></li>
+        </ul>
+        <div id="tskt">
+            Thông số kỹ thuật
+        </div>
+        <div id="video">Video</div>
+        <div id="binhluan">Comment here</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#mytabs").tabs({
+                event: "mouseover"
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo jQuery UI</title>
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--jQuery UI (css + js)-->
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div>Từ ngày: <input id="tungay"></div>
+    <div id="myaccord">
+        <h3>Tóm tắt</h3>
+        <div>ABC</div>
+        <h3>Nội dung</h3>
+        <div>
+            <table class="technical-content">
+                <tbody>
+                    <tr class="technical-content-item">
+                        <td>Kích thước màn hình</td>
+                        <td>
+                            <p>6.3 inches</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Công nghệ màn hình</td>
+                        <td>
+                            <p>Super Retina XDR</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Camera sau</td>
+                        <td>
+                            <p>Chính: 48MP khẩu độ ƒ/1.6 OIS hỗ trợ chụp 24MP hoặc 48MP<br>Góc Siêu Rộng: 48MP khẩu độ
+                                ƒ/2.2 góc
+                                nhìn 120°<br>Telephoto: 48MP khẩu độ ƒ/2.8 OIS zoom quang học lên đến 8x</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Camera trước</td>
+                        <td>
+                            <p>Camera 18MP Center Stage Khẩu độ ƒ/1.9</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Chipset</td>
+                        <td>
+                            <p>Chip A19 Pro</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Công nghệ NFC</td>
+                        <td>
+                            <p>Có</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Bộ nhớ trong</td>
+                        <td>
+                            <p>512 GB</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Thẻ SIM</td>
+                        <td>
+                            <p>Sim kép (nano-Sim và e-Sim) - Hỗ trợ 2 e-Sim</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Hệ điều hành</td>
+                        <td>
+                            <p>iOS 26</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Độ phân giải màn hình</td>
+                        <td>
+                            <p>2622 x 1206 pixels</p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Tính năng màn hình</td>
+                        <td>
+                            <p>Màn hình Luôn Bật, ProMotion 120Hz, HDR, True Tone, Dải màu rộng (P3), Haptic Touch, Tỷ
+                                lệ tương phản
+                                2.000.000:1, Độ sáng 1000 nit (tiêu chuẩn), 1600 nit (HDR), 3000 nit (ngoài trời) / tối
+                                thiểu 1 nit,
+                                Lớp phủ kháng dầu, Chống phản chiếu, Hỗ trợ đa ngôn </p>
+                        </td>
+                    </tr>
+                    <tr class="technical-content-item">
+                        <td>Loại CPU</td>
+                        <td>
+                            <p>CPU 6 lõi với 2 lõi hiệu năng và 4 lõi tiết kiệm điện</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Review</h3>
+        <div>COntent</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#myaccord").accordion();
+            $("#tungay").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                minDate: -90,
+                maxDate: "1D",
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+</body>
+
+</html>
